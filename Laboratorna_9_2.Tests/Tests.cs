@@ -172,7 +172,7 @@ public class Tests
     }
 
     [Test]
-    public void BinarySearch_FoundStudent_ReturnsCorrectIndex()
+    public void BinarySearch()
     {
         StudentLevel[] students =
         {
@@ -187,10 +187,5 @@ public class Tests
         int expectedIndex = 1;
         int result = Program.BinarySearch(students, "Лисяк", Specialization.ComputerScience, 5) + 1;
         Assert.AreEqual(expectedIndex, result, $"Expected index: {expectedIndex}, Actual result: {result}");
-        Console.WriteLine("Sorted Array:");
-        foreach (var student in students)
-        {
-            Console.WriteLine($"{student.LastName}");
-        }
     }
 }
